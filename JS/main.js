@@ -1,7 +1,4 @@
-window.onload = function () {
-  writeList();
-};
-class ToDoValues {
+class toDoValues {
   constructor(name, checked) {
     this.name = name;
     this.checked = checked;
@@ -10,29 +7,48 @@ class ToDoValues {
 
 let toDoList = [];
 
-let newToDo = new ToDoValues("Träna", false);
-let newToDo2 = new ToDoValues("Träna", false);
-let newToDo3 = new ToDoValues("Träna", false);
-
-toDoList.push(newToDo);
-toDoList.push(newToDo2);
-toDoList.push(newToDo3);
+let newTodo = new toDoValues("Träna", false);
+let newTodo2 = new toDoValues("Plugga", false);
+let newTodo3 = new toDoValues("Handla", false);
+toDoList.push(newTodo);
+toDoList.push(newTodo2);
+toDoList.push(newTodo3);
 
 let toDoContainer = document.createElement("div");
 toDoContainer.className = "toDoContainer";
 
+writeList();
+
 function writeList() {
   toDoContainer.innerHTML = "";
-
   for (let i = 0; i < toDoList.length; i++) {
     let currentItem = toDoList[i];
+
     let ul = document.createElement("ul");
-    ulElement.className = "itemsUl";
+    ul.className = "listUl";
 
     let li = document.createElement("li");
-    li.className = "li";
+    li.className = "listLi";
     li.innerHTML = currentItem.name;
 
     let doneButton = document.createElement("input");
+    doneButton.setAttribute("type", "checkbox");
+
+    let removeButton = document.createElement("button");
+    removeButton.className = "removeButtons";
+    removeButton.setAttribute("type", "button");
+    removeButton.innerHTML = '<i class="bi bi-x-square-fill"></i>';
+
+    let doneButtonContainer = document.createElement("li");
+    let removeButtonContainer = document.createElement("li");
+    doneButtonContainer.appendChild(doneButton);
+    removeButtonContainer.appendChild(removeButton);
+
+    toDoContainer.appendChild(ul);
+    ul.appendChild(doneButtonContainer);
+    ul.appendChild(removeButtonContainer);
+    ul.appendChild(li);
   }
 }
+
+document.getElementById("container").appendChild(toDoContainer);
