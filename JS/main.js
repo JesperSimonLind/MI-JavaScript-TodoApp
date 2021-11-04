@@ -45,6 +45,22 @@ function writeList() {
     doneButtonContainer.appendChild(doneButton);
     removeButtonContainer.appendChild(removeButton);
 
+    let buttonStyle = li;
+
+    doneButton.addEventListener("change", checkIfDone);
+
+    function checkIfDone() {
+      if (doneButton.checked == true) {
+        buttonStyle.style.textDecoration = "line-through";
+        currentItem.checked = true;
+        ul.style.backgroundColor = "gray";
+      } else {
+        buttonStyle.style.textDecoration = "none";
+        currentItem.checked = false;
+        ul.style.backgroundColor = "white";
+      }
+    }
+
     toDoContainer.appendChild(ul);
     ul.appendChild(li);
     ul.appendChild(doneButtonContainer);

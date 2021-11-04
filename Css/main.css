@@ -8,6 +8,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+#toDoForm input {
+  padding: 12px;
+}
+
 #container {
   display: flex;
   flex-direction: column;
@@ -24,6 +28,8 @@ body {
   display: flex;
   list-style: none;
   font-size: 1.5rem;
+  border: 1px solid black;
+  background-color: white;
 }
 .toDoContainer .doneButtons {
   width: 30px;
