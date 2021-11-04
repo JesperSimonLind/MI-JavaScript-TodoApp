@@ -61,6 +61,12 @@ function writeList() {
       }
     }
 
+    removeButton.addEventListener("click", removeToDo);
+    function removeToDo() {
+      toDoList.splice(i, 1);
+      writeList();
+    }
+
     toDoContainer.appendChild(ul);
     ul.appendChild(li);
     ul.appendChild(doneButtonContainer);
