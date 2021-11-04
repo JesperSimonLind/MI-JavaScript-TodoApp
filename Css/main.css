@@ -4,8 +4,8 @@ body {
   height: 100vh;
   width: 100%;
   justify-content: center;
-  background-color: blue;
-  background-image: linear-gradient(235 deg blue 0%, lightblue 65%);
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  font-family: "Montserrat", sans-serif;
 }
 
 #container {
@@ -19,6 +19,25 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.toDoContainer .listUl {
+  display: flex;
+  list-style: none;
+  font-size: 1.5rem;
+}
+.toDoContainer .doneButtons {
+  width: 30px;
+  height: 25px;
+}
+.toDoContainer .removeButtons {
+  background-color: red;
+  color: white;
+  font-size: 1.2rem;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -33,6 +33,7 @@ function writeList() {
 
     let doneButton = document.createElement("input");
     doneButton.setAttribute("type", "checkbox");
+    doneButton.className = "doneButtons";
 
     let removeButton = document.createElement("button");
     removeButton.className = "removeButtons";
@@ -45,9 +46,9 @@ function writeList() {
     removeButtonContainer.appendChild(removeButton);
 
     toDoContainer.appendChild(ul);
+    ul.appendChild(li);
     ul.appendChild(doneButtonContainer);
     ul.appendChild(removeButtonContainer);
-    ul.appendChild(li);
   }
 }
 
