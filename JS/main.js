@@ -73,5 +73,18 @@ function writeList() {
     ul.appendChild(removeButtonContainer);
   }
 }
+let inputField = document.getElementById("inputField");
+document.getElementById("toDoForm").addEventListener("submit", addNewToDo);
+
+function addNewToDo(e) {
+  e.preventDefault();
+  let Usertext = inputField.value;
+  if (Usertext !== "") {
+    let newToDoItem = new toDoValues(Usertext, false);
+    toDoList.push(newToDoItem);
+    inputField.value = "";
+    writeList();
+  }
+}
 
 document.getElementById("container").appendChild(toDoContainer);
