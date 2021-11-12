@@ -8,8 +8,34 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+#toDoForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #toDoForm input {
+  border-radius: 12px;
   padding: 12px;
+  height: 40px;
+  width: 200px;
+  background-color: white;
+}
+#toDoForm #addButton {
+  border-radius: 12px;
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  background-color: white;
+  font-size: 1.3rem;
+}
+#toDoForm #sortBtn {
+  border-radius: 12px;
+  margin: 10px;
+  width: 150px;
+  height: 75px;
+  background-color: white;
+  font-size: 1.4rem;
 }
 
 #container {
@@ -26,13 +52,16 @@ body {
 }
 .toDoContainer .listUl {
   display: flex;
+  justify-content: center;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   border: 1px solid black;
   background-color: white;
+  width: 250px;
+  border-radius: 12px;
 }
-.toDoContainer .doneButtons {
-  width: 30px;
+.toDoContainer input.doneButtons {
+  width: 25px;
   height: 25px;
 }
 .toDoContainer .removeButtons {
@@ -50,6 +79,33 @@ p {
 @media screen and (min-width: 1200px) {
   body {
     background-image: linear-gradient(to right top, #ff0000, #f46300, #e09100, #c7b600, #a9d50e);
+  }
+
+  #toDoForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #toDoForm input {
+    border-radius: 12px;
+    padding: 12px;
+    width: 150px;
+    height: 25px;
+  }
+  #toDoForm #addButton {
+    border-radius: 12px;
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    background-color: white;
+  }
+  #toDoForm #sortBtn {
+    border-radius: 12px;
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: white;
   }
 }
 
