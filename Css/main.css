@@ -41,9 +41,16 @@ body {
   font-size: 1.2rem;
 }
 
-h1 {
+p {
   color: white;
-  font-size: 3rem;
+  font-size: 4rem;
+  text-shadow: 1px 1px black;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: linear-gradient(to right top, #ff0000, #f46300, #e09100, #c7b600, #a9d50e);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
