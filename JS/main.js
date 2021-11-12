@@ -10,9 +10,11 @@ let toDoList = [];
 let newTodo = new toDoValues("Träna", false);
 let newTodo2 = new toDoValues("Plugga", false);
 let newTodo3 = new toDoValues("Handla", false);
+let newTodo4 = new toDoValues("App", false);
 toDoList.push(newTodo);
 toDoList.push(newTodo2);
 toDoList.push(newTodo3);
+toDoList.push(newTodo4);
 
 let toDoContainer = document.createElement("div");
 toDoContainer.className = "toDoContainer";
@@ -86,5 +88,19 @@ function addNewToDo(e) {
     writeList();
   }
 }
+
+function sortList() {
+  toDoList.sort(function (a, b) {
+    if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+    if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+    return 0;
+  });
+
+  writeList();
+}
+
+let sortBtn = document
+  .getElementById("sortBtn")
+  .addEventListener("click", sortList);
 
 document.getElementById("container").appendChild(toDoContainer);
